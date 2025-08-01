@@ -1,0 +1,199 @@
+body{
+    background-color: #FFDCAA;
+    background: linear-gradient(to right, #FFDCAA, #FFB6C1);
+    font-family: "Dosis", sans-serif;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+/* Make the header sticky */
+h1 {
+    color: #FF5733;
+    text-align: center;
+    font-family: "Dosis", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 800;
+    font-style: normal;
+    position: sticky;
+    top: 0;
+    padding: 15px;
+    z-index: 100; /* Ensure it stays above other content */
+    margin-top: 0%;
+}
+.container {
+    background-color: #FFF0F5;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 800px; /* Limit maximum width for better readability */
+    padding: 20px;
+    flex-grow: 1; /* Allow the container to grow and fill available space */
+    display: flex;
+    flex-direction: column;
+}
+.info-input{
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 2px solid #FF5733;
+    border-radius: 20px;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+.info-input::placeholder {
+    color: #FFB6C1;
+    opacity: 0.7;
+}
+.info-input:focus {
+    outline: none;
+    border-color: #dca1ee;
+    color:#dca1ee
+}
+.container label{
+    display: block;
+    margin-bottom: 2px;
+    color: #FF5733;
+    font-weight: bold;
+    font-size: 18px;
+}
+button {
+    background-color: #FF5733;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+button:hover {
+    background-color: #dca1ee;  /* Change to a lighter color on hover */
+}
+button:disabled {
+    background-color: #FFB6C1;
+    cursor: not-allowed; /* Disable button when no input */
+}
+.table-header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    background-color: #FFF0F5;
+    border-radius: 20px;
+    padding: 10px;
+    border: #FF5733 2px solid;
+    margin: auto;
+    color: #FF5733;
+    font-size: medium;
+    font-weight: bold;
+    position: sticky;
+    top: 0; /* Make the header sticky */
+}
+.table-header > div {
+    flex: 1; /* Ensure each header takes equal space */
+    text-align: center; /* Center the text in each header */
+    width: 100%; /* Set a fixed width for each header */
+}
+.table {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    /* list the each element to fit the name */
+    width: 90%;
+}
+.book-list{
+    flex-grow: 1; /* Allow the book list to grow and fill available space */
+    overflow-y: auto;
+    margin: 10px 0;
+    padding: 0 10px;
+    max-height: 400px;
+    width: 100%;
+    margin-left: 20px;
+}
+.book-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    margin: 5px 0;
+    background-color: #FFF0F5;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.book-row div {
+    flex: 1;
+    text-align: center;
+    word-wrap: break-word;
+}
+.header-actions{
+    flex: 0.5; /* Adjust width for action buttons */
+}
+.delete-btn {
+    background-color: #ff3333;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 15px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+    margin-left: 10px;
+}
+
+.delete-btn:hover {
+    background-color: #cc0000;
+}
+
+.loading {
+    text-align: center;
+    color: #FF5733;
+    font-size: 18px;
+    margin: 20px;
+}
+.load-more-container {
+    position: sticky;
+    bottom: 0;
+    background: transparent;
+    padding: 10px;
+    z-index: 98;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+#load-more-btn {
+    background-color: #dca1ee;
+    margin-top: 10px;
+    opacity: 1;
+    visibility: visible;
+    transition: all 0.3s ease;
+}
+
+#load-more-btn:disabled {
+    background-color: #FFB6C1;
+    cursor: not-allowed;
+    opacity: 0.7;
+}
+/* Make the form sticky */
+#book-form {
+    position: sticky;
+    top: 20px;
+    background-color: #FFF0F5;
+    padding: 15px;
+    border-radius: 10px;
+    z-index: 99;
+    margin-bottom: 15px;
+    width: 90%;
+}
+h5{
+    color: gray;
+    font-size: 15px;
+    text-align: center;
+    font-family: "Dosis", sans-serif;
+    font-style: italic;
+    font-weight: normal;
+
+}

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>San's Bookstore</title>
+    <link rel="stylesheet" href="/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@200..800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <h1><span class = "auto-type"></span></h1>
+
+     <!-- Load library from the CDN -->
+  <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+     <!-- create autotype in the webpage -->
+    <script>
+        var typed = new Typed('.auto-type', {
+            strings: ["Welcome to San's Bookstore", "Find your next favorite book"],
+            typeSpeed: 150,
+            backSpeed: 125,
+            loop: true
+        });
+    </script>
+
+    <!-- create the form to input the book information -->
+    <section class ="container">
+        <form id="book-form">
+         <div>
+             <label for="title">Book Title</label>
+            <input type="text" id="title" name="title" placeholder="Enter book title" class="info-input">
+            <br>
+            <label for="author">Book Author</label>
+            <input type="text" id="author" name="author" placeholder="Enter book author"class="info-input">
+            <br>
+            <label for="publisher">Publisher</label>
+            <input type="text" id="publisher" name="publisher" placeholder="Enter publisher name" class="info-input">
+        </div>
+        <button type="submit" class = "btn">Add Book</button>
+    </form>
+    <br>
+    <!-- create the book table -->
+    <section class="table">
+        <section class="table-header">
+        <div class="header-title">Title</div>
+        <div class="header-author">Author</div>
+        <div class="header-publisher">Publisher</div>
+        <div class="header-actions">Actions</div>
+    </section>
+    <section id="book-list" class="book-list">
+        <!-- Book entries will be dynamically added here -->
+</section>
+<div class="load-more-container">
+    <button id="load-more-btn" class="btn">Load More Books</button>
+</div>
+    </section>
+    </section>
+    <script type="module" src="/index.js"></script>
+    <h5 class="reserved_right">© 2025 Sandra Chan. All rights reserved.</h5>
+</body>
+</html>
